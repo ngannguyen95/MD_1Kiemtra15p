@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ba cạnh của 1 tam giác</title>
+</head>
+<body>
+<h1>Kiểm tra tam giác vuông</h1>
+<table>
+    <tr>
+        <td>Cạnh a</td>
+        <td>Cạnh b</td>
+        <td>Cạnh c</td>
+    </tr>
+    <tr>
+        <td><input type="number" id="a"></td>
+        <td><input type="number" id="b"></td>
+        <td><input type="number" id="c"></td>
+    </tr>
+</table>
+<button onclick="kiemTra()">Kiểm Tra</button>
+<p id="thongbao"></p>
+<script>
+    function kiemTra() {
+        let canhA = +document.getElementById('a').value
+        let canhB = +document.getElementById('b').value
+        let canhC = +document.getElementById('c').value
+        if (canhA < 0 || canhB < 0 || canhC < 0) {
+            document.getElementById('thongbao').innerText = "Không phải tam giác"
+        } else {
+            if ((canhA + canhB) > canhC || (canhB + canhC) > canhA || (canhA + canhC) > canhB) {
+                if ((canhA * canhA + canhB * canhB == canhC * canhC) || (canhB * canhB + canhC * canhC == canhA * canhA) ||
+                    (canhC * canhC + canhA * canhA == canhB * canhB)) {
+                    document.getElementById('thongbao').innerText = "Là một tam giác vuông"
+                } else
+                    document.getElementById('thongbao').innerText = "Không phải là một tam giác vuông"
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

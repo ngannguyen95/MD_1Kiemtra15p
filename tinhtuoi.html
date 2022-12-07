@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính tuổi</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            Tuổi em
+        </td>
+        <td><input type="number" id="em"></td>
+    </tr>
+    <tr>
+        <td> Tuổi anh
+        </td>
+        <td>
+            <input type="number" id="anh()">
+        </td>
+    </tr>
+    <tr>
+    <td> Tuổi bố</td>
+        <td><input type="number" id="bo()"></td>
+    </tr>
+</table>
+<button onclick="ketQua()">Kết quả</button>
+<script>
+    function ketQua() {
+        let tuoiem= +document.getElementById('em').value
+        let tuoianh= tuoiem+3
+        let tuoibo= tuoianh*6
+        document.getElementById('anh()').value=(tuoianh);
+        document.getElementById('bo()').value=(tuoibo);
+    }
+</script>
+</body>
+</html>

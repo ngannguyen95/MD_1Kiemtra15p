@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In ra năm sinh</title>
+</head>
+<body>
+<h1> In ra năm sinh</h1>
+<labe>
+    Năm sinh <input type="number" id="year">
+</labe>
+<button onclick="ketQua()">Tên năm sinh</button>
+<table>
+    <tr>
+        <td id="can"></td>
+        <td id="chi"></td>
+    </tr>
+</table>
+<script>
+    function ketQua() {
+        let namSinh = +document.getElementById('year').value
+        let can = namSinh % 10;
+        let chi = namSinh % 12;
+        console.log(can, chi)
+        switch (can) {
+            case 0:
+                document.getElementById('can').innerText = "Canh"
+                break;
+            case 1:
+                document.getElementById('can').innerText = "Thân"
+                break;
+            case 2:
+                document.getElementById('can').innerText = "Nhâm"
+                break;
+            case 3:
+                document.getElementById('can').innerText = "Qúy"
+                break;
+            case 4:
+                document.getElementById('can').innerText = "Gíap"
+                break;
+            case 5:
+                document.getElementById('can').innerText = "Ất"
+                break;
+            case 6:
+                document.getElementById('can').innerText = "Bính"
+                break;
+            case 7:
+                document.getElementById('can').innerText = "Đinh"
+                break;
+            case 8:
+                document.getElementById('can').innerText = "Mậu"
+                break;
+            case 9:
+                document.getElementById('can').innerText = "Kỷ"
+                break;
+        }
+        switch (chi) {
+            case 0:
+                document.getElementById('chi').innerText = "Thân"
+                break;
+            case 1:
+                document.getElementById('chi').innerText = "Dậu"
+                break;
+            case 2:
+                document.getElementById('chi').innerText = "Tuất"
+                break;
+            case 3:
+                document.getElementById('chi').innerText = "Hợi"
+                break;
+            case 4:
+                document.getElementById('chi').innerText = "TÝ"
+                break;
+            case 5:
+                document.getElementById('chi').innerText = "Sửu"
+                break;
+            case 6:
+                document.getElementById('chi').innerText = "Dần"
+                break;
+            case 7:
+                document.getElementById('chi').innerText = "Mão"
+                break;
+            case 8:
+                document.getElementById('chi').innerText = "Thìn"
+                break;
+            case 9:
+                document.getElementById('hi').innerText = "TỴ"
+                break;
+            case 10:
+                document.getElementById('chi').innerText = "Ngọ"
+                break;
+            case 11:
+                document.getElementById('chi').innerText = "Mùi"
+                break;
+        }
+    }
+</script>
+</body>
+</html>
